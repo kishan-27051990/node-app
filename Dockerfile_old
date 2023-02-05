@@ -1,0 +1,13 @@
+FROM node
+
+WORKDIR /apps
+
+COPY package.json /apps
+
+RUN npm install
+
+COPY . /apps
+
+EXPOSE 3000
+
+CMD ["node" , "server.js"]
